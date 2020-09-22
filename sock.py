@@ -4,8 +4,6 @@
 from flask import Flask, render_template
 from flask_socketio import SocketIO, send
 
-
-
 app = Flask(__name__)
 @app.route('/')
 def index():
@@ -26,12 +24,6 @@ def handleMessage(msg):
 def handle_my_custom_event(data):
     print('received json: ' + str(data))
     send(str(data), broadcast=True)
-
-
-if __name__ == "__main__":
-    socketio.run(app, debug=True)
-    send(str(data))
-
 
 if __name__ == "__main__":
    socketio.run(app, debug=True)
