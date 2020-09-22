@@ -25,8 +25,16 @@ def handleMessage(msg):
 @socketio.on('evento')
 def handle_my_custom_event(data):
     print('received json: ' + str(data))
+<<<<<<< HEAD
+    send(str(data), broadcast=True)
+
+
+if __name__ == "__main__":
+   socketio.run(app, debug=True)
+=======
     send(str(data))
 
 
 if __name__ == "__main__":
    socketio.run(app, debug=True)
+>>>>>>> a2f31c513c627cd55fa4295e67263a099d7f124a
