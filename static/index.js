@@ -1,6 +1,6 @@
 $(document).ready(function(){
     console.log("pronto")
-    var socket = io.connect('ws://');
+    var socket = io.connect('ws://wflasksocketio.herokuapp.com');
     socket.on('connect', function(){
         socket.send('User has connected!');
     });
