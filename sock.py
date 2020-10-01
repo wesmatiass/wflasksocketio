@@ -11,7 +11,7 @@ def index():
 
 @app.route('/google745ad2d45cec360c.html')
 def index():
-    return render_template('google745ad2d45cec360c.html')
+    return send_file('google745ad2d45cec360c.html')
 
 @app.route('/favicon.ico')
 def favicon():
