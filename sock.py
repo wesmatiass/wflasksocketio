@@ -9,6 +9,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/google745ad2d45cec360c.html')
+def index():
+    return render_template('google745ad2d45cec360c.html')
+
 @app.route('/favicon.ico')
 def favicon():
     return send_file('w.png')
