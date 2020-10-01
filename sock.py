@@ -1,7 +1,7 @@
 #gunicorn -b 127.0.0.1:5000 -w 3 sock:app
-#gunicorn --worker-class eventlet -w 1 module:app
+#gunicorn --worker-class eventlet -w 1 sock:app
 
-from flask import Flask, render_template
+from flask import Flask, render_template, send_file
 from flask_socketio import SocketIO, send
 
 app = Flask(__name__)
@@ -9,6 +9,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/favicon.ico')
+def favicon():
+    return send_file('w.png')
 
 app.config['SECRET_KEY'] = 'mysecret'
 socketio = SocketIO(app, cors_allowed_origins="*")
