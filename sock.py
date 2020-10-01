@@ -10,7 +10,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/google745ad2d45cec360c.html')
-def index():
+def abc():
     return send_file('google745ad2d45cec360c.html')
 
 @app.route('/favicon.ico')
